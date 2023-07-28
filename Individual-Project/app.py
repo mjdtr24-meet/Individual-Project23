@@ -45,7 +45,7 @@ def signin():
             print('SIGN IN ERROR:', e)
             error = "Authenication Error"
             print(error)
-    return render_template("signin.html")
+    return render_template("sign_in.html")
 
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -67,7 +67,7 @@ def signup():
         except Exception as e:
             print("SIGN UP ERROR:", e) 
             error = "Authenication Error"
-            return redirect(url_for('signup'))
+            return redirect(url_for('signin'))
     return render_template("signup.html")
 
 
